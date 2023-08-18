@@ -81,3 +81,6 @@ There are two ways we can approach this problem:
 
 
 2. Using the `Genetic Algorithm` to find the best path for the agent. In this case, we need to find a way to encode the path into a chromosome. One way to do this is to use the `Q_Table` as the chromosome. In this case, we need to find a way to crossover and mutate the `Q_Table` to generate new paths.
+
+
+3. We can take a multi agent approach and then combine the `Q_Tables` on every N episode by using `Genetic Algorithm`.
