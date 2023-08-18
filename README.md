@@ -17,9 +17,11 @@ Our ultimate goal is to find the optimal path by incorporating the `Genetic Algo
 ## Define the Environment
 The environment is an `11x11` distribusiton cetner.
 As right now there of 3 types of cells in the environment:
-* `Orders`: The robot can move to these cells and pick up the order.
-* `Aisles`: the robot can use them to travel throughout the warehouse.
-* `Shelves`: The robot can not move to these cells and these locations are for storing items.
+* `Orders`: The robot can move to these cells and pick up the order (**green squares**).
+* `Aisles`: the robot can use them to travel throughout the warehouse (**white squares**).
+* `Shelves`: The robot can not move to these cells and these locations are for storing items (**gray squares**).
+
+    ![alt text](images/Distribution-Center-Map.png "Distribution Center Map")
 
 ## Stages of the Project
 
@@ -33,10 +35,15 @@ As right now there of 3 types of cells in the environment:
         Aisles: We reward the agent with a meager negative reward when it passes through these cells.
         Shelves: The agent can not move to these cells and these locations are for storing items. We punish the agent with a negative reward if it tries to move to these cells, and then we finish the episode.
 
+    [2-1-Q-Learning_Mutli-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/1-1-Q-Learning_Single-Order.ipynb)
+
     1.2. **Genetic Algorithm:**
     For single order picking, we used a simple `Genetic Algorithm` to find the optimal path.
 
+    [1-2-Genetic-Algorithm_Single-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/1-2-Genetic-Algorithm_Single-Order.ipynb)
+
 2. **Multi Order Picking**
+
         Rewards:
         Orders: We reward the agent with a positive reward if it picks up the order. We also remove the order from the environment. And after the counter of the orders reaches zero, we finish the episode.
 
@@ -44,6 +51,10 @@ As right now there of 3 types of cells in the environment:
     ```python
     q_values = np.zeros((NUM_ORDERS, 11, 11, 4))
     ```
+
+    [2-1-Q-Learning_Mutli-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/2-1-Q-Learning_Mutli-Order.ipynb)
+
+    ![alt text](images/QL-Multi-Orders.png "QL - Multi-Orders")
 
 3. **Multi Order Picking and Returning to the Starting Point**
     
@@ -56,7 +67,9 @@ As right now there of 3 types of cells in the environment:
         As we can see in the results, for the Final Problem ,multi-order picking and getting back, the convergenece is happening around the 500th episode.
         ![alt text](output1.png "Convergence of the Q-Learning Algorithm")
 
+    [3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT](https://github.com/matinrnz/PathPlanning/blob/main/3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT.ipynb)
 
+    ![alt text](images/QL-Multi-Orders-Back.png "QL - Multi-Orders - Back to Starting Point")
 
 ## TODO
 
