@@ -54,7 +54,7 @@ As right now there of 3 types of cells in the environment:
 
     [2-1-Q-Learning_Mutli-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/2-1-Q-Learning_Mutli-Order.ipynb)
 
-    ![alt text](Images/QL-Multi-Orders.png "QL - Multi-Orders")
+    ![alt text](Images/QL-Multi-Order.png "QL - Multi-Order")
 
 3. **Multi Order Picking and Returning to the Starting Point**
     
@@ -69,7 +69,7 @@ As right now there of 3 types of cells in the environment:
 
     [3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT](https://github.com/matinrnz/PathPlanning/blob/main/3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT.ipynb)
 
-    ![alt text](Images/QL-Multi-Orders-Back.png "QL - Multi-Orders - Back to Starting Point")
+    ![alt text](Images/QL-Multi-Order-Back.png "QL - Multi-Order - Back to Starting Point")
 
 ## TODO
 
