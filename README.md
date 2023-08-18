@@ -35,7 +35,7 @@ As right now there of 3 types of cells in the environment:
         Aisles: We reward the agent with a meager negative reward when it passes through these cells.
         Shelves: The agent can not move to these cells and these locations are for storing items. We punish the agent with a negative reward if it tries to move to these cells, and then we finish the episode.
 
-    [2-1-Q-Learning_Mutli-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/1-1-Q-Learning_Single-Order.ipynb)
+    [1-1-Q-Learning_Single-Order.ipynb](https://github.com/matinrnz/PathPlanning/blob/main/1-1-Q-Learning_Single-Order.ipynb)
 
     1.2. **Genetic Algorithm:**
     For single order picking, we used a simple `Genetic Algorithm` to find the optimal path.
