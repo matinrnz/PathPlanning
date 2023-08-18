@@ -21,7 +21,7 @@ As right now there of 3 types of cells in the environment:
 * `Aisles`: the robot can use them to travel throughout the warehouse (**white squares**).
 * `Shelves`: The robot can not move to these cells and these locations are for storing items (**gray squares**).
 
-    ![alt text](images/Distribution-Center-Map.png "Distribution Center Map")
+    ![alt text](Images/Distribution-Center-Map.png "Distribution Center Map")
 
 ## Stages of the Project
 
@@ -65,7 +65,7 @@ As right now there of 3 types of cells in the environment:
     ```
         Results:
         As we can see in the results, for the Final Problem ,multi-order picking and getting back, the convergenece is happening around the 500th episode.
-        ![alt text](output1.png "Convergence of the Q-Learning Algorithm")
+    ![alt text](Images/Convergence-of-the-Q-Learning-Algorithm.png "Convergence of the Q-Learning Algorithm")
 
     [3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT](https://github.com/matinrnz/PathPlanning/blob/main/3-1-Q-Learning_Mutli-Order_BACK-TO-STARTING-POINT.ipynb)
 
