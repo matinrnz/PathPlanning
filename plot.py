@@ -7,9 +7,9 @@ def plot_train_test_losses(single_agent:np.array, multi_agent:np.array,multi_age
                            x_label="Episode Steps", y_label="Reward",
                            min_max_bounds= True,
                            tight_x_lim = True, y_lim=None,
-                           signle_legend = "Single Agent",
-                           multi_legend = "Multi Agent",
-                           genetic_legend = "Multi Agent + Genetic",
+                           signle_legend = "SAQL",
+                           multi_legend = "MAQL",
+                           genetic_legend = "MAQL-GA",
                            save_path=None)->None:
 
     plt.rcParams["font.family"] = "Times New Roman"
