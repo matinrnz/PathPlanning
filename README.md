@@ -140,9 +140,17 @@ In our algorithm, Mutiation is our `Q-Learning` algorithm at its exploration pha
 ### Shortest Path in Hard Environment
 ![alt text](Images/Shortest-path-Env-Hard.png "Shortest Path in Hard Environment")
 
-
 ### Reward Per Episode plot - Env: Easy
 ![alt text](Images/Reward-Per-Episode-Env-Easy.png "Shortest Path in Easy Environment")
+#### Why Single Agent Cross Validation plot has a wider range compared to multi agent approaches?
+
+The plot showes the uncertainty of single agent Q-Learning. This means that in some Runs the agent was able to find the order path fast, and in some it strayed from the order and had to take a longer time to finally find the order. Let's explain it with an example:
+
+Imagine there is a super market left to our new house. In the first scenario, we get out of the hosue and we go right, in this case we have to search the whole neighborhood to find the market. In another scenario, we get out of the house and we go left, and we find the market much more faster.
+
+Now, Lets say we are a popluated family with 20 members! We all go out to find the market.  In this case, theres a much higher probablity that there is a member who goes left and finds the market faster. 
+
+The example above explains why corss validation plot of single agent has a wider range compared to multi agent approaches, Since in signle agent can stray from the order path, but in multi agent approaches, the agents are more likely to find the order path faster, in every run of the cross validation.
 
 ### Reward Per Episode plot - Env: Medium
 ![alt text](Images/Reward-Per-Episode-Env-Medium.png "Shortest Path in Easy Environment")
