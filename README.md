@@ -2,7 +2,7 @@
 
 **B.Sc. Thesis Project, Summer 2023**
 
-**SuperVisor:** Dr. Hossein Akbaripour
+**Supervisor:** Dr. Hossein Akbaripour
 
 **Student:** Matineh Rangzan
 
@@ -11,8 +11,8 @@
 Consider an e-commerce company has a distribution center, and the company would like all of the picking operations in the center to be performed by warehouse robots.
 In the context of e-commerce warehousing, “picking” is the task of gathering individual items from various locations in the warehouse in order to fulfill customer orders.
 We are trying to use Reinforcement Learning and Genetic Algorithm to optimize the path of the robot in a Distribution Center. The robot is trying to pick up the orders from the shelves and put them in the cart. The robot can move in four directions: `up, down, left, and right`. 
+* Each order is only one item.
 * The robot can only move one step at a time.
-* The robot can only pick up one order at a time.
 * The agent can only pick up the order if it is in the same cell as the order.
 
 After picking the item from the shelves, the robot must bring the item to a specific location (starting point) within the warehouse where the items can be packaged for shipping.
@@ -27,8 +27,9 @@ As right now there of 3 types of cells in the environment:
 * `Orders`: The robot can move to these cells and pick up the order (**green squares**).
 * `Aisles`: the robot can use them to travel throughout the warehouse (**white squares**).
 * `Shelves`: The robot can not move to these cells and these locations are for storing items (**gray squares**).
+* `Crowded Area` It is better that the robot does not pass through this area (**pink squares**). (Only in hard environment)
 
-    ![alt text](Images/Distribution-Center-Map.png "Distribution Center Map")
+    ![alt text](Images/Distribution-Center-Map-Hard.png "Distribution Center Map")
 
 ## Stages of the Project
 
@@ -127,10 +128,28 @@ In our algorithm, Mutiation is our `Q-Learning` algorithm at its exploration pha
 **NOTE:** We tried the random mutaion method for offsprings, but it was decreasing the performance of the algorithm.
 
 
-### Results
+## Results
+
+
+### Shortest Path in Easy Environment
+![alt text](Images/Shortest-path-Env-Easy.png "Shortest Path in Easy Environment")
+
+### Shortest Path in Medium Environment
+![alt text](Images/Shortest-path-Env-Medium.png "Shortest Path in Medium Environment")
+
+### Shortest Path in Hard Environment
+![alt text](Images/Shortest-path-Env-Hard.png "Shortest Path in Hard Environment")
+
+
+### Reward Per Episode plot - Env: Easy
+![alt text](Images/Reward-Per-Episode-Env-Easy.png "Shortest Path in Easy Environment")
+
+### Reward Per Episode plot - Env: Medium
+![alt text](Images/Reward-Per-Episode-Env-Medium.png "Shortest Path in Easy Environment")
+
 We used 20 agents. We ran our algorithm for 100 steps, where at each step, each of the agents gets trained for 10 episodes. After of each step, we pass the agents thourgh the genetic algrorithm; With `Elitism`  10 of the best ageents go to the next step, and also 10 children are generated from the all agents through our roulette wheel selection, and crossover.
 
 We can see in this Figure that our genetic algorithm has the fastest convergence, which is round step 80, after that is Decenteralized, and the slowest one is the Single Agent Q-Learning.
 
-
-![alt text](Images/cross_vals.png "Results")
+### Reward Per Episode plot - Env: Hard
+![alt text](Images/Reward-Per-Episode-Env-Hard.png "Shortest Path in Easy Environment")
