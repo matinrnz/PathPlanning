@@ -23,7 +23,7 @@ Our ultimate goal is to find the optimal path by incorporating the `Genetic Algo
 
 ## Define the Environment
 The environment is an `11x11` distribusiton cetner.
-As right now there of 3 types of cells in the environment:
+As right now there of 4 types of cells in the environment:
 * `Orders`: The robot can move to these cells and pick up the order (**green squares**).
 * `Aisles`: the robot can use them to travel throughout the warehouse (**white squares**).
 * `Shelves`: The robot can not move to these cells and these locations are for storing items (**gray squares**).
