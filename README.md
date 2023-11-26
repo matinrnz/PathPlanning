@@ -1,6 +1,6 @@
 # Route Optimization for Order Picking in Distribution Centers using Reinforcement Learning based Genetic Algorithm
 
-**B.Sc. Thesis Project, Summer 2023**
+**B.Sc. Thesis Project, Summer 2023, Amirkabir University of Technology**
 
 **Supervisor:** Dr. Hossein Akbaripour
 
@@ -140,6 +140,13 @@ In our algorithm, Mutiation is our `Q-Learning` algorithm at its exploration pha
 ### Shortest Path in Hard Environment
 ![alt text](Images/Shortest-path-Env-Hard.png "Shortest Path in Hard Environment")
 
+### Shortest Path in New Hard Environment
+![alt text](Images/Shortest-path-New-Env-Hard.png "Shortest Path in New Hard Environment")
+
+### Shortest Path in Very Hard Environment
+![alt text](Images/Shortest-path-Env-VeryHard.png "Shortest Path in Very Hard Environment")
+
+
 ### Reward Per Episode plot - Env: Easy
 ![alt text](Images/Reward-Per-Episode-Env-Easy.png "Shortest Path in Easy Environment")
 #### Why Single Agent Cross Validation plot has a wider range compared to multi agent approaches?
@@ -153,11 +160,17 @@ Now, Lets say we are a popluated family with 20 members! We all go out to find t
 The example above explains why corss validation plot of single agent has a wider range compared to multi agent approaches, Since in signle agent can stray from the order path, but in multi agent approaches, the agents are more likely to find the order path faster, in every run of the cross validation.
 
 ### Reward Per Episode plot - Env: Medium
-![alt text](Images/Reward-Per-Episode-Env-Medium.png "Shortest Path in Easy Environment")
+![alt text](Images/Reward-Per-Episode-Env-Medium.png "Shortest Path in Medium Environment")
 
 We used 20 agents. We ran our algorithm for 100 steps, where at each step, each of the agents gets trained for 10 episodes. After of each step, we pass the agents thourgh the genetic algrorithm; With `Elitism`  10 of the best ageents go to the next step, and also 10 children are generated from the all agents through our roulette wheel selection, and crossover.
 
 We can see in this Figure that our genetic algorithm has the fastest convergence, which is round step 80, after that is Decenteralized, and the slowest one is the Single Agent Q-Learning.
 
 ### Reward Per Episode plot - Env: Hard
-![alt text](Images/Reward-Per-Episode-Env-Hard.png "Shortest Path in Easy Environment")
+![alt text](Images/Reward-Per-Episode-Env-Hard.png "Shortest Path in Hard Environment")
+
+### Reward Per Episode plot - Env: New Hard
+![alt text](Images/Reward-Per-Episode-New-Env-Hard.png "Shortest Path in New Hard Environment")
+
+### Reward Per Episode plot - Env: Vey Hard
+![alt text](Images/Reward-Per-Episode-Env-VeryHard.png "Shortest Path in Very Hard Environment")
