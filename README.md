@@ -6,6 +6,8 @@
 
 **Student:** Matineh Rangzan
 
+##
+For a visual summary and deeper insights into our project, you can view our **[Project Presentation (PPT)](PathPlanning-Presentation.pdf)** and **[Conference Poster (PDF)](PathPlanning-IIIEC-Conference-Poster.pdf)**.
 
 ## Introduction
 Consider an e-commerce company has a distribution center, and the company would like all of the picking operations in the center to be performed by warehouse robots.
